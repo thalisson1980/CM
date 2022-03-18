@@ -1,5 +1,6 @@
 package com.example.cm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -25,6 +26,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    fun goToNextPage(view: View) {
+        val editText = findViewById<EditText>(R.id.ed1)
+
+        val intent = Intent(this, DashBoardActivity::class.java).apply {
+            putExtra("param_name",editText.toString()) }
+        startActivity(intent)
     }
 }
 
