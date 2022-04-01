@@ -3,6 +3,9 @@ package com.example.cm
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -32,9 +35,42 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.ed1)
 
         val intent = Intent(this, DashBoardActivity::class.java).apply {
-            putExtra("param_name",editText.toString()) }
+            putExtra("param_name",editText.text.toString()) }
         startActivity(intent)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater:MenuInflater = menuInflater
+
+        inflater.inflate(R.menu.custommenu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+
+
+       return when (item.itemId) {
+            R.id.item1 ->{
+                Toast.makeText(this,"Escolheu a opçao 1",Toast.LENGTH_SHORT).show()
+                true
+            }
+
+            R.id.item3 ->{
+                Toast.makeText(this,"Escolheu a opçao 3",Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.subItem1 ->{
+                Toast.makeText(this,"Escolheu a subOpcao 1",Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
+        }
+
+    }
+
 }
 
 //teste
