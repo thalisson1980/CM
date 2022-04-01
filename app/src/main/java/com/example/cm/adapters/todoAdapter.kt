@@ -19,7 +19,7 @@ class todoAdapter(private val todos: ArrayList<todo>):RecyclerView.Adapter<todoV
         val currentTodo = todos[position]
         holder.nome.text =  currentTodo.nome
         holder.idade.text = currentTodo.idade.toString()
-        holder.genero.text = currentTodo.Genero
+        holder.genero.text = currentTodo.genero
     }
 
     override fun getItemCount(): Int {

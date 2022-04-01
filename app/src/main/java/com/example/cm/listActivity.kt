@@ -1,7 +1,9 @@
 package com.example.cm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cm.adapters.todoAdapter
 import com.example.cm.models.todo
@@ -15,7 +17,7 @@ class listActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list)
+        setContentView(R.layout.list)
 
         todoAdapter = todoAdapter(ArrayList())
         rvTodoItems.adapter = todoAdapter
@@ -24,8 +26,16 @@ class listActivity : AppCompatActivity() {
         val nome = intent.getStringExtra("nome")
         val idade = intent.getStringExtra("idade")
         val genero = intent.getStringExtra("genero")
-        val todo = todo(nome.toString(),Integer.parseInt(idade),genero.toString())
+        val todo = todo(nome!!,Integer.parseInt(idade),genero!!)
         todoAdapter.addTodo(todo)
 
     }
+
+    fun returnMain(view: View) {
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+
 }

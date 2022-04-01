@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         btnAddTodo.setOnClickListener {
             val todoNome = etNome.text.toString()
-            val todoIdade = Integer.valueOf(etIdade.text.toString())
+            val todoIdade = etIdade.text.toString()
             val todoGenero =  "masculino"
             if(todoNome.isNotEmpty()){
                 val intent = Intent(this, listActivity::class.java).apply {
