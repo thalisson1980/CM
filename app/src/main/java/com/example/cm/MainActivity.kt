@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cm.adapters.todoAdapter
 import com.example.cm.models.todo
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.list.*
 import java.time.LocalDate
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
                 todoAdapter.addTodo(todo)
                 etNome.text.clear()
+                //setContentView(R.layout.list)
             }
         }
     }
