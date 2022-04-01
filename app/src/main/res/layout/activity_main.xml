@@ -4,43 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info"
+            android:background="@color/white"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:paddingBottom="50dp"/>
+
+             <EditText
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:hint="Name"
+            android:inputType="text"
+            android:layout_below="@+id/tv1"
+                 />
+
+    <EditText
+        android:id="@+id/etIdade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:hint="Age"
+        android:inputType="number"
+        android:layout_below="@+id/etNome"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTodoItems"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-        <LinearLayout
-            android:id="@+id/ll1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <EditText
-                android:id="@+id/etTodo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:hint="Write a todo"
-                android:inputType="text"/>
-
-            <Button
-                android:id="@+id/btnAddTodo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="add todo"
-                />
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/etIdade"/>
 
 
-        </LinearLayout>
-
-
+    <Button
+        android:id="@+id/btnAddTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar"
+        />
 
 
 </RelativeLayout>

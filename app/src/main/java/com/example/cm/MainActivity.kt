@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         rvTodoItems.adapter = todoAdapter
         rvTodoItems.layoutManager = LinearLayoutManager(this)
 
+        val btnAddTodo = R.id.btnAddTodo
         btnAddTodo.setOnClickListener {
             val todoTitle = etTodo.text.toString()
             if(todoTitle.isNotEmpty()){
