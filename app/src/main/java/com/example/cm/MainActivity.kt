@@ -20,14 +20,16 @@ class MainActivity : AppCompatActivity() {
         rvTodoItems.adapter = todoAdapter
         rvTodoItems.layoutManager = LinearLayoutManager(this)
 
-        val btnAddTodo = R.id.btnAddTodo
+
         btnAddTodo.setOnClickListener {
-            val todoTitle = etTodo.text.toString()
-            if(todoTitle.isNotEmpty()){
-                val todo = todo(todoTitle, LocalDate.now())
+            val todoNome = etNome.text.toString()
+            val todoIdade = Integer.valueOf(etIdade.text.toString())
+            val todoGenero =  "masculino"
+            if(todoNome.isNotEmpty()){
+                val todo = todo(todoNome, todoIdade,todoGenero)
 
                 todoAdapter.addTodo(todo)
-                etTodo.text.clear()
+                etNome.text.clear()
             }
         }
     }

@@ -6,24 +6,24 @@
     android:paddingEnd="8dp">
 
     <TextView
-        android:id="@+id/todoTitle"
+        android:id="@+id/todoNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="placeholder title"
         android:textSize="24sp"/>
 
     <TextView
-        android:id="@+id/todoDate"
+        android:id="@+id/todoIdade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="placeholder date"
-        android:layout_below="@+id/todoTitle"
+        android:layout_below="@+id/todoNome"
         android:layout_marginTop="5dp"
         android:textColor="#ccc"
         android:textSize="12sp"/>
 
     <TextView
-        android:id="@+id/todoNumber"
+        android:id="@+id/todoGenero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="placeholder Number"

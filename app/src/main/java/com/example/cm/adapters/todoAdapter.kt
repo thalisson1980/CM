@@ -17,9 +17,9 @@ class todoAdapter(private val todos: ArrayList<todo>):RecyclerView.Adapter<todoV
 
     override fun onBindViewHolder(holder: todoViewHolder, position: Int) {
         val currentTodo = todos[position]
-        holder.title.text =  currentTodo.title
-        holder.date.text = currentTodo.date.toString()
-        holder.number.text = "#" + (position + 1).toString()
+        holder.nome.text =  currentTodo.nome
+        holder.idade.text = currentTodo.idade.toString()
+        holder.genero.text = currentTodo.Genero
     }
 
     override fun getItemCount(): Int {
@@ -33,7 +33,7 @@ class todoAdapter(private val todos: ArrayList<todo>):RecyclerView.Adapter<todoV
 
 }
 class todoViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
-    val title = itemView.todoTitle
-    val date = itemView.todoDate
-    val number = itemView.todoNumber
+    val nome = itemView.todoNome
+    val idade = itemView.todoIdade
+    val genero = itemView.todoGenero
 }
