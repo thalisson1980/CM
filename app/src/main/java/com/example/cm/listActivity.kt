@@ -29,11 +29,16 @@ class listActivity : AppCompatActivity() {
         val todo = todo(nome!!,Integer.parseInt(idade),genero!!)
         todoAdapter.addTodo(todo)
 
+
+
+
     }
 
     fun returnMain(view: View) {
 
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java).apply {
+            putExtra("lista",   todoAdapter)
+        }
         startActivity(intent)
     }
 
