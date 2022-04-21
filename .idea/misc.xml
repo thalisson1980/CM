@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Thalisson/AndroidStudioProjects/CM/app/src/main/res/layout-land/activity_main.xml" value="0.31040564373897706" />
+        <entry key="..\:/Users/Thalisson/AndroidStudioProjects/CM/app/src/main/res/layout/activity_dash_board.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Thalisson/AndroidStudioProjects/CM/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Thalisson/AndroidStudioProjects/CM/app/src/main/res/layout/todo_line.xml" value="0.2515625" />
+        <entry key="..\:/Users/Thalisson/AndroidStudioProjects/CM/app/src/main/res/menu/custommenu.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/Thalisson/AndroidStudioProjects/CM/app/src/main/res/menu/menuex3.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
