@@ -11,9 +11,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Toast.makeText(this, "Bem vindo", Toast.LENGTH_SHORT).show()
     }
 
-    fun changeName(view:View){
+    fun pagar(view:View){
         val editText = findViewById<EditText>(R.id.ed1)
         val textView = findViewById<TextView>(R.id.tv1)
 

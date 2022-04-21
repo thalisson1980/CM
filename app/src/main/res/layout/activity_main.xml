@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,34 +9,42 @@
 
     <TextView
         android:id="@+id/tv1"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Your name..."
-        android:textSize="30dp">
+        android:textSize="30dp"
+
+        >
         
 
     </TextView>
 
     <EditText
         android:id="@+id/ed1"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:hint="Write your name!"
         android:inputType="text"
-        android:layout_above="@+id/bt1"
-        android:layout_marginBottom="100dp"/>
+        />
+
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Write your name!"
+        android:inputType="text"
+       />
 
     <Button
         android:id="@+id/bt1"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+
         android:layout_marginBottom="50dp"
         android:backgroundTint="#333"
         android:textSize="15dp"
         android:padding="15dp"
-        android:onClick="changeName"
+        android:onClick="pagar"
         android:text="submit"
 
 
@@ -48,4 +56,4 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>
