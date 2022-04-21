@@ -11,6 +11,7 @@ import java.time.LocalDate
 class MainActivity : AppCompatActivity() {
 
     private lateinit var todoAdapter: todoAdapter
+    private val aux = 11
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,15 +21,12 @@ class MainActivity : AppCompatActivity() {
         rvTodoItems.adapter = todoAdapter
         rvTodoItems.layoutManager = LinearLayoutManager(this)
 
-        btnAddTodo.setOnClickListener {
-            val todoTitle = etTodo.text.toString()
-            if(todoTitle.isNotEmpty()){
-                val todo = todo(todoTitle, LocalDate.now())
+        for(i in 1 until 11){
+            val todo = todo("país "+(aux-i), "Capital $i",i*100,i*10,i*20)
+            todoAdapter.addTodo(todo )
 
-                todoAdapter.addTodo(todo)
-                etTodo.text.clear()
-            }
         }
+
     }
 }
 
