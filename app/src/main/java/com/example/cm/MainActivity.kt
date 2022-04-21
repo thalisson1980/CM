@@ -18,16 +18,10 @@ class MainActivity : AppCompatActivity() {
     fun pagar(view:View){
         val editText = findViewById<EditText>(R.id.ed1)
         val textView = findViewById<TextView>(R.id.tv1)
+        val editText2 = findViewById<EditText>(R.id.ed2)
 
-        if(editText.text.toString() == ""){
-            Toast.makeText(this,"Please, write your name",Toast.LENGTH_SHORT).show()
-        }else{
-            textView.text = editText.text
-        }
-
-
+        textView.text = (Integer.parseInt(editText.text.toString()) * Integer.parseInt(editText2.text.toString()) * 1.23).toString()
 
     }
 }
 
-//teste
