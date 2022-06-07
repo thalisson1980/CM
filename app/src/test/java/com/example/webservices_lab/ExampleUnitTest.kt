@@ -1,4 +1,4 @@
-package com.example.cm
+package com.example.webservices_lab
 
 import org.junit.Test
 
