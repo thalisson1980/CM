@@ -1,4 +1,4 @@
-package com.example.cm
+package com.example.lab_maps
 
 import org.junit.Test
 
