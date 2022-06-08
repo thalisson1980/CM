@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">CM</string>
+    <string name="app_name">PERS_LAB2</string>
+    <string name="hint_word">Person...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Person not saved because it is empty.</string>
+    <string name="add_word">Add Person</string>
+    <string name="hint_word2">Email...</string>
+    <string name="empty_not_saved2">Person not saved because Email is empty.</string>
+    <string name="hint_word3">Age...</string>
+    <string name="empty_not_saved3">Person not saved because Age is empty.</string>
 </resources>

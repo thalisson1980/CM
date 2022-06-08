@@ -1,15 +1,18 @@
-package com.example.cm.dao
+package com.example.pers_lab2.dao
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
 import androidx.room.OnConflictStrategy.IGNORE
-import  com.example.cm.model.Person
+import androidx.room.Query
+import com.example.pers_lab2.model.Person
 import kotlinx.coroutines.flow.Flow
 
 
 @Dao
-interface personDao {
+interface PersonDao {
 
     @Query("SELECT * FROM person_table ORDER BY name ASC")
+    //Flow: notificar em tempo real
     fun getOrderedPeople(): Flow<List<Person>>
 
     @Insert(onConflict = IGNORE)
@@ -17,4 +20,5 @@ interface personDao {
 
     @Query("DELETE FROM person_table")
     suspend fun deleteAll()
+
 }

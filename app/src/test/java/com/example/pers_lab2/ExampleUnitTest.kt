@@ -1,4 +1,4 @@
-package com.example.cm
+package com.example.pers_lab2
 
 import org.junit.Test
 

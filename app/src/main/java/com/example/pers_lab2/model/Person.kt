@@ -1,17 +1,22 @@
-package com.example.cm.model
-
+package com.example.pers_lab2.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "person_table")
-class Person (
+
+@Entity (tableName = "person_table")
+class Person(
+
     @PrimaryKey
     @ColumnInfo(name = "name")
     val name: String,
-    @ColumnInfo(name = "idade")
-    val idade: Int,
+
     @ColumnInfo(name = "email")
-    val email: String
+    val email: String,
+
+    @ColumnInfo(name = "age")
+    val age: Int
+
 )
+
