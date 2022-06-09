@@ -109,10 +109,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     for (user in users) {
                         position =
                             LatLng(user.address.geo.lat.toDouble(), user.address.geo.lng.toDouble())
-                        mMap.addMarker(
-                            MarkerOptions().position(position)
-                                .title(user.address.zipcode + " - " + user.address.city)
-                        )
+                        if(user.address.geo.lat.toDouble()>0){
+                            mMap.addMarker(
+                                MarkerOptions().position(position)
+                                    .title(user.address.zipcode + " - " + user.address.city)
+                            )
+                        }
+
                     }
                 }
             }
