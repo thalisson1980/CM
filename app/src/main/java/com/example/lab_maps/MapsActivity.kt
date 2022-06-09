@@ -156,7 +156,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val geocoder = Geocoder(this)
         val list = geocoder.getFromLocation(lat, lng, 1)
         return list[0].getAddressLine(0)
-    }
+    }      
 
     fun setUpMap() {
         if (ActivityCompat.checkSelfPermission(
