@@ -11,6 +11,8 @@ class PersonRepository(private val personDao: PersonDao){
     //Variavel que vai ao Dao chamar o metodo getOrdered...
     val allPeople: Flow<List<Person>> = personDao.getOrderedPeople()
 
+    val bPeople: Flow<List<Person>> = personDao.getB()
+
     @Suppress("RedudantSuspendModifier")
     @WorkerThread
     suspend fun insert(person: Person){
