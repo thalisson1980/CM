@@ -45,34 +45,21 @@ class MainActivity : AppCompatActivity() {
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getUserById(2)
 
-        call.enqueue(object: Callback<WebServiceUserOutput>{
-            override fun onResponse(call: Call<WebServiceUserOutput>, response: Response<WebServiceUserOutput>) {
-                if(response.isSuccessful){
+        call.enqueue(object : Callback<WebServiceUserOutput> {
+            override fun onResponse(
+                call: Call<WebServiceUserOutput>,
+                response: Response<WebServiceUserOutput>
+            ) {
+                if (response.isSuccessful) {
                     val c: WebServiceUserOutput = response.body()!!
-                    Toast.makeText(this@MainActivity, c.address.zipcode, Toast.LENGTH_SHORT).show()
+
                 }
             }
-            override fun onFailure(call: Call<WebServiceUserOutput>, t: Throwable){
+
+            override fun onFailure(call: Call<WebServiceUserOutput>, t: Throwable) {
                 Toast.makeText(this@MainActivity, "${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
 
-    }
-    fun post(view: View) {
-
-        val request = ServiceBuilder.buildService(EndPoints::class.java)
-        val call = request.postTest("Post Succeeded")
-
-        call.enqueue(object: Callback<OutputPost>{
-            override fun onResponse(call: Call<OutputPost>, response: Response<OutputPost>){
-                if(response.isSuccessful){
-                    val c: OutputPost = response.body()!!
-                    Toast.makeText(this@MainActivity, c.id.toString() + "-" + c.title, Toast.LENGTH_SHORT).show()
-                }
-            }
-            override fun onFailure(call: Call<OutputPost>, t: Throwable){
-                Toast.makeText(this@MainActivity, "${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
     }
 }

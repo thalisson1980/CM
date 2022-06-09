@@ -2,7 +2,8 @@ package com.example.webservices_lab.API
 
 
 data class OutputPost(
-    val id: Int,
-    val title: String
+    val common: String,
+    val Capital: String,
+    val symbol: String
 )
 

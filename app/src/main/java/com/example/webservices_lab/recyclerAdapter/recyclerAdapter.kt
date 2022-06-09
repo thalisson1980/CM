@@ -28,14 +28,14 @@ class recyclerAdapter (val users: List<WebServiceUserOutput>): RecyclerView.Adap
 }
 
 class UsersViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
-    private val nome: TextView = itemView.findViewById(R.id.nome)
-    private val email:TextView = itemView.findViewById(R.id.email)
-    private val cidade:TextView = itemView.findViewById(R.id.cidade)
+    private val common: TextView = itemView.findViewById(R.id.nome)
+    private val capital:TextView = itemView.findViewById(R.id.email)
+    private val symbol:TextView = itemView.findViewById(R.id.cidade)
 
     fun bind(user: WebServiceUserOutput) {
-        nome.text = user.name
-        cidade.text = user.address.city
-        email.text = user.address.zipcode
+        common.text = user.common
+        capital.text = user.capital
+        symbol.text = user.symbol
     }
 
 }

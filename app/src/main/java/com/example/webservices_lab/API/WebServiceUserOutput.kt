@@ -1,16 +1,10 @@
 package com.example.webservices_lab.API
 
 data class WebServiceUserOutput (
-    val id: Int,
-    val name: String,
-    val email: String,
-    val address: Address
+        val common: String,
+        val capital: String,
+        val symbol: String
 )
 
-data class Address (
 
-    val city: String,
-    val zipcode: String
-
-)
 
