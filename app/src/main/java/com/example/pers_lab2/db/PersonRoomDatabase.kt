@@ -43,12 +43,12 @@ abstract class PersonRoomDatabase : RoomDatabase() {
 
             personDao.deleteAll()
 
-            var person = Person("Gonçalo", "gurjais@ipvc.pt", 21)
+            var person = Person("Gonçalo", "gurjais@ipvc.pt", 21,2000)
             personDao.insert(person)
-            person = Person("Luís", "lf@ipvc.pt", 21)
+            person = Person("Luís", "lf@ipvc.pt", 21,2000)
             personDao.insert(person)
 
-            person = Person("Joel", "js@ipvc,.pt", 21)
+            person = Person("Joel", "js@ipvc,.pt", 21,2000)
             personDao.insert(person)
         }
     }

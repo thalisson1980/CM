@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             data?.getStringExtra(NewPersonActivity.EXTRA_REPLY)?.let { reply ->
                 val array = reply.split(",")
                 //array[0] - Person, array[1] - email, etc
-                val person = Person(array[0], array[1], array[2].toInt())
+                val person = Person(array[0], array[1], array[2].toInt(), array[3].toInt())
                 personViewModel.insert(person)
             }
         }else{

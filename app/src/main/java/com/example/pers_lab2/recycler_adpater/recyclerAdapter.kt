@@ -17,17 +17,15 @@ class recyclerAdapter : ListAdapter<Person , recyclerAdapter.PersonViewHolder>(P
     }
     override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
         val current = getItem(position)
-        holder.bind(current.name, current.email, current.age.toString())
+        holder.bind(current.name, current.age.toString())
     }
 
     class PersonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val personItemView: TextView = itemView.findViewById(R.id.name)
-        private val emailItemView: TextView = itemView.findViewById(R.id.email)
         private val ageItemView: TextView = itemView.findViewById(R.id.age)
 
-        fun bind(text: String?, email: String?, age:String?) {
+        fun bind(text: String?, age:String?) {
             personItemView.text = text
-            emailItemView.text = email
             ageItemView.text = age
         }
 
