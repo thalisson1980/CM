@@ -7,24 +7,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:background="#a8ddb5"
-        android:gravity="center"
-        android:textColor="#333"
-        android:padding="20dp"/>
 
     <EditText
         android:id="@+id/et1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
-        android:layout_centerVertical="true"
-        android:padding="25dp"
-        android:inputType="text"/>
+        android:gravity="center"
+        android:hint="Write something"
+        android:inputType="text"
+        android:padding="25dp" />
 
     <Button
         android:id="@+id/btn1"
@@ -32,10 +23,10 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Save"
         android:layout_marginTop="60dp"
         android:backgroundTint="#666A86"
-        android:onClick="login"/>
+        android:onClick="save"/>
 
 
 
