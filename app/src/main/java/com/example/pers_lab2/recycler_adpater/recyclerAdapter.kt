@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pers_lab2.R
 import com.example.pers_lab2.model.Person
-import java.util.*
 
 class recyclerAdapter : ListAdapter<Person , recyclerAdapter.PersonViewHolder>(PersonComparator()) {
 
@@ -18,25 +17,16 @@ class recyclerAdapter : ListAdapter<Person , recyclerAdapter.PersonViewHolder>(P
     }
     override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
         val current = getItem(position)
-        var estado = "Ja fez anos";
-        var anoAtual = Calendar.getInstance().get(Calendar.YEAR);
-        if(anoAtual > (current.year + current.age)){
-            estado = "Vai fazer anos";
-        }
-
-
-        holder.bind(current.name, current.age.toString(),estado)
+        holder.bind(current.name, current.age.toString())
     }
 
     class PersonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val personItemView: TextView = itemView.findViewById(R.id.name)
         private val ageItemView: TextView = itemView.findViewById(R.id.age)
-        private val estadoItemView: TextView = itemView.findViewById(R.id.estado)
 
-        fun bind(text: String?, age:String?,estado: String?) {
+        fun bind(text: String?, age:String?) {
             personItemView.text = text
             ageItemView.text = age
-            ageItemView.text = estado
         }
 
         companion object {

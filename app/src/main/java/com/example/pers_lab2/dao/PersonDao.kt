@@ -21,10 +21,4 @@ interface PersonDao {
     @Query("DELETE FROM person_table")
     suspend fun deleteAll()
 
-    @Query("DELETE FROM person_table WHERE age > 20")
-    suspend fun delete20(): Flow<List<Person>>
-
-    @Query("SELECT * FROM person_table where name like 'b%'")
-    fun getB(): Flow<List<Person>>
-
 }

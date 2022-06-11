@@ -4,8 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,15 +44,6 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener{
             val intent = Intent(this@MainActivity, NewPersonActivity::class.java)
             startActivityForResult(intent, newPersonActivityRequestCode)
-        }
-
-        val button = findViewById<Button>(R.id.bPeople)
-        button.setOnClickListener {
-            personViewModel.bPeople.observe(this, Observer{ persons ->
-                persons?.let { adapter.submitList(it) }
-            })
-
-
         }
     }
 
