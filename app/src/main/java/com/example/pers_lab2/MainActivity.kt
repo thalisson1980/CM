@@ -53,13 +53,8 @@ class MainActivity : AppCompatActivity() {
             personViewModel.bPeople.observe(this, Observer{ persons ->
                 persons?.let { adapter.submitList(it) }
             })
-        }
 
-        val button2 = findViewById<Button>(R.id.delete20)
-        button.setOnClickListener {
-            personViewModel.delete20.observe(this, Observer{ persons ->
-                persons?.let { adapter.submitList(it) }
-            })
+
         }
     }
 
